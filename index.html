@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yatri Go — Smart Productivity Assistant for Gig Workers</title>
+    <meta name="description" content="Yatri Go is a smart productivity tool for gig workers. Simplify routine actions and save time so you can focus on what matters.">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #0A0A0A;
+            color: #E5E5E5;
+            line-height: 1.6;
+        }
+        .container { max-width: 900px; margin: 0 auto; padding: 40px 20px; }
+
+        /* HEADER */
+        header {
+            text-align: center;
+            padding: 60px 20px 40px;
+            border-bottom: 1px solid #1F1F1F;
+        }
+        .logo {
+            font-size: 48px;
+            font-weight: 900;
+            color: #FFC400;
+            letter-spacing: -1px;
+            margin-bottom: 10px;
+        }
+        .tagline {
+            color: #888;
+            font-size: 16px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            font-weight: 500;
+        }
+        .version {
+            display: inline-block;
+            margin-top: 16px;
+            padding: 4px 14px;
+            background: #1A1A1A;
+            border: 1px solid #FFC400;
+            border-radius: 20px;
+            color: #FFC400;
+            font-size: 12px;
+            letter-spacing: 1px;
+        }
+
+        /* SECTIONS */
+        section {
+            padding: 50px 20px;
+            border-bottom: 1px solid #1F1F1F;
+        }
+        h2 {
+            color: #FFC400;
+            font-size: 26px;
+            margin-bottom: 20px;
+            letter-spacing: -0.5px;
+        }
+        h3 {
+            color: #E5E5E5;
+            font-size: 18px;
+            margin: 20px 0 10px;
+        }
+        p { color: #B0B0B0; margin-bottom: 14px; font-size: 15px; }
+        ul { margin-left: 20px; margin-bottom: 16px; }
+        li { color: #B0B0B0; margin-bottom: 8px; font-size: 15px; }
+        a { color: #FFC400; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+
+        /* HERO */
+        .hero {
+            text-align: center;
+            padding: 50px 20px;
+        }
+        .hero p {
+            max-width: 600px;
+            margin: 0 auto 16px;
+            font-size: 16px;
+            color: #999;
+        }
+
+        /* FEATURES GRID */
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+        .feature-card {
+            background: #141414;
+            border: 1px solid #1F1F1F;
+            border-radius: 16px;
+            padding: 24px;
+        }
+        .feature-card .icon {
+            font-size: 28px;
+            margin-bottom: 12px;
+        }
+        .feature-card h3 {
+            color: #FFC400;
+            font-size: 16px;
+            margin-bottom: 8px;
+            margin-top: 0;
+        }
+        .feature-card p {
+            font-size: 14px;
+            color: #888;
+            margin-bottom: 0;
+        }
+
+        /* PRICING */
+        .pricing {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 16px;
+            margin-top: 30px;
+        }
+        .price-card {
+            background: #141414;
+            border: 1px solid #1F1F1F;
+            border-radius: 16px;
+            padding: 24px;
+            text-align: center;
+        }
+        .price-card.featured {
+            border: 2px solid #FFC400;
+            background: #1A1500;
+        }
+        .price-card .plan {
+            color: #888;
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+        }
+        .price-card .price {
+            color: #FFC400;
+            font-size: 28px;
+            font-weight: 800;
+            margin-bottom: 6px;
+        }
+        .price-card .duration {
+            color: #666;
+            font-size: 13px;
+        }
+
+        /* CONTACT */
+        .contact-box {
+            background: #141414;
+            border: 1px solid #1F1F1F;
+            border-radius: 16px;
+            padding: 30px;
+            margin-top: 20px;
+        }
+        .contact-box p { margin-bottom: 10px; font-size: 15px; }
+        .contact-box strong { color: #FFC400; }
+
+        /* FOOTER */
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            color: #555;
+            font-size: 13px;
+        }
+        footer p { color: #555; margin-bottom: 6px; font-size: 13px; }
+
+        /* POLICY */
+        .policy { padding: 40px 20px; }
+        .policy h2 { margin-bottom: 16px; }
+        .policy p, .policy li { color: #999; font-size: 14px; }
+
+        /* RESPONSIVE */
+        @media (max-width: 600px) {
+            .logo { font-size: 36px; }
+            h2 { font-size: 22px; }
+            .container { padding: 20px 16px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <div class="container">
+            <div class="logo">Yatri Go ⚡</div>
+            <p class="tagline">Smart Productivity Assistant</p>
+            <div class="version">v1.0.0 • Made in India 🇮🇳</div>
+        </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="container">
+            <h2>Smart Productivity Tool for Gig Workers</h2>
+            <p>Yatri Go helps gig workers simplify their daily routine by automating repetitive tasks and saving time — so you can focus on what matters.</p>
+            <p>Works with all productivity apps. 100% safe, secure, and made in India.</p>
+        </div>
+    </section>
+
+    <!-- FEATURES -->
+    <section>
+        <div class="container">
+            <h2>Features</h2>
+            <div class="features">
+                <div class="feature-card">
+                    <div class="icon">⚡</div>
+                    <h3>Fast & Reliable</h3>
+                    <p>Handles routine actions in milliseconds so you never miss an opportunity.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon">🎛</div>
+                    <h3>Smart Filters</h3>
+                    <p>Customize what you want to prioritize. Set rules that match your workflow.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon">🔋</div>
+                    <h3>Battery Friendly</h3>
+                    <p>Optimized to run all day without draining your phone's battery.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon">🌐</div>
+                    <h3>Multi-Language</h3>
+                    <p>Available in English and हिंदी. More languages coming soon.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon">🛡️</div>
+                    <h3>Safe & Secure</h3>
+                    <p>No data collection. Everything runs locally on your device.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon">📊</div>
+                    <h3>Track Your Time</h3>
+                    <p>See how much time you're saving with detailed history and stats.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PRICING -->
+    <section>
+        <div class="container">
+            <h2>Pricing</h2>
+            <p>Simple, affordable plans designed for gig workers.</p>
+            <div class="pricing">
+                <div class="price-card">
+                    <div class="plan">1 Day Pass</div>
+                    <div class="price">₹20</div>
+                    <div class="duration">1 Day</div>
+                </div>
+                <div class="price-card">
+                    <div class="plan">1 Week Pass</div>
+                    <div class="price">₹99</div>
+                    <div class="duration">7 Days</div>
+                </div>
+                <div class="price-card">
+                    <div class="plan">15 Days Pass</div>
+                    <div class="price">₹149</div>
+                    <div class="duration">15 Days</div>
+                </div>
+                <div class="price-card featured">
+                    <div class="plan">1 Month Pass ⭐</div>
+                    <div class="price">₹249</div>
+                    <div class="duration">30 Days</div>
+                </div>
+                <div class="price-card">
+                    <div class="plan">3 Months Pass</div>
+                    <div class="price">₹549</div>
+                    <div class="duration">90 Days</div>
+                </div>
+                <div class="price-card">
+                    <div class="plan">6 Months Pass</div>
+                    <div class="price">₹999</div>
+                    <div class="duration">180 Days</div>
+                </div>
+                <div class="price-card">
+                    <div class="plan">1 Year Pass 👑</div>
+                    <div class="price">₹1999</div>
+                    <div class="duration">365 Days</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PRIVACY POLICY -->
+    <section class="policy">
+        <div class="container">
+            <h2>Privacy Policy</h2>
+            <p>Last updated: 2026</p>
+            <p>Yatri Go respects your privacy. We do not collect, store, or share any personal information from your device. All processing happens locally on your phone.</p>
+            <h3>What We Don't Collect:</h3>
+            <ul>
+                <li>Personal identification information</li>
+                <li>Location data</li>
+                <li>Contact information</li>
+                <li>Any content from your apps</li>
+            </ul>
+            <h3>What We Do Store:</h3>
+            <ul>
+                <li>App preferences (saved locally on your device only)</li>
+                <li>Subscription status (verified via secure payment gateway)</li>
+            </ul>
+            <p>For questions, contact: <a href="mailto:[geteasyvpro01@gmail.com]">[geteasyvpro01@gmail.com]</a></p>
+        </div>
+    </section>
+
+    <!-- TERMS & CONDITIONS -->
+    <section class="policy">
+        <div class="container">
+            <h2>Terms & Conditions</h2>
+            <p>Last updated: 2026</p>
+            <p>By using Yatri Go, you agree to the following terms:</p>
+            <ul>
+                <li>Yatri Go is a productivity tool designed to assist gig workers in managing their daily tasks.</li>
+                <li>Users are responsible for complying with the terms of service of all third-party applications.</li>
+                <li>Yatri Go provides a subscription-based digital service.</li>
+                <li>We reserve the right to update these terms at any time.</li>
+            </ul>
+            <p>For questions, contact: <a href="mailto:[geteasyvpro01@gmail.com]">[geteasyvpro01@gmail.com]</a></p>
+        </div>
+    </section>
+
+    <!-- REFUND POLICY -->
+    <section class="policy">
+        <div class="container">
+            <h2>Refund Policy</h2>
+            <p>All payments made to Yatri Go are final and non-refundable. Since Yatri Go provides a digital service delivered instantly, we do not offer refunds for partial use or change of mind.</p>
+            <p>Exceptional cases may be reviewed within 24 hours of purchase. Contact: <a href="mailto:[geteasyvpro01@gmail.com]">[geteasyvpro01@gmail.com]</a></p>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section>
+        <div class="container">
+            <h2>Contact Us</h2>
+            <div class="contact-box">
+                <p><strong>Business:</strong> Yatri Go is a product of [YOUR_NAME].</p>
+                <p><strong>📍 Address:</strong> [YOUR_ADDRESS]</p>
+                <p><strong>✉️ Email:</strong> <a href="mailto:[geteasyvpro01@gmail.com]">[geteasyvpro01@gmail.com]</a></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <p>Yatri Go is a product of [YOUR_NAME].</p>
+            <p>📍 Address: [YOUR_ADDRESS]</p>
+            <p>✉️ Email: [geteasyvpro01@gmail.com]</p>
+            <p style="margin-top: 16px;">Made with ❤️ in India</p>
+            <p>© 2026 Yatri Go. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
